@@ -5,7 +5,6 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   background-color: #fff;
-  box-shadow: 3px 0px 2px #BFBFBF;
   padding: .5rem;
   display: flex;
   flex-direction: column;
@@ -14,5 +13,25 @@ export const Container = styled.div`
 
 export const AreaImg = styled.div`
   width: 100%
+  flex: 50%;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .teste {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+  }
+`
+export const Title = styled.h1`
+font-size: 15px;
 `
 
+export const Header = styled.header`
+
+`
