@@ -1,16 +1,20 @@
 import { createGlobalStyle } from 'styled-components'
+import { cores } from '../models/cores'
 
 const GlobalCss = createGlobalStyle`
  *{
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
-  color: #011C40;
-}
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    color: ${cores.black};
+    list-style: none;
+    text-decoration: none;
+  }
+
   body{
     width: 100%;
     height: 100%;
-    background-color: #BBE8F2;
+    background-color: ${cores.bgLight};
   }
 
   .container{
@@ -23,9 +27,7 @@ const GlobalCss = createGlobalStyle`
   .content{
     flex: 1;
     padding: .8rem 1rem;
-
   }
-
  `
 
 export default GlobalCss

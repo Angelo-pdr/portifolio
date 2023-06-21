@@ -5,15 +5,18 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   background-color: #fff;
-  padding: .5rem;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+
 `
 
 export const AreaImg = styled.div`
-  width: 100%
-  flex: 50%;
+  width: 100%;
+  height: 100%
+  flex: 1;
   font-size: 15px;
   display: flex;
   flex-direction: column;
@@ -29,9 +32,19 @@ export const AreaImg = styled.div`
   }
 `
 export const Title = styled.h1`
-font-size: 15px;
+  font-size: 1rem;
 `
 
-export const Header = styled.header`
+export const Links = styled.ul`
 
+`
+export const LinkItem = styled.li`
+  padding: .5rem 0px;
+  text-align: center;
+`
+export const Redes = styled.footer`
+  img{
+    height: auto;
+    padding 0px .5rem;
+  }
 `
