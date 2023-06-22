@@ -9,6 +9,7 @@ const GlobalCss = createGlobalStyle`
     color: ${cores.black};
     list-style: none;
     text-decoration: none;
+    font-family: Montserrat, sans-serif;
   }
 
   body{
