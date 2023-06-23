@@ -22,11 +22,15 @@ const GlobalCss = createGlobalStyle`
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    position: relative;
   }
 
   .content{
-    flex: 1;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-left: 16.3rem;
     padding: .8rem 1rem;
   }
  `

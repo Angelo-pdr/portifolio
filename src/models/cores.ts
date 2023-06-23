@@ -1,5 +1,6 @@
 export const cores = {
   white: '#fff',
   black: '#011C40',
-  bgLight: '#BBE8F2'
+  bgLight: '#BBE8F2',
+  shadowLigh: '#80DDF2'
 }

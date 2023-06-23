@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Container, AreaImg, Title, Links, LinkItem, Redes } from './styles'
 import {
   FolderOpen,
@@ -21,7 +22,7 @@ const MenuBar = () => (
     <Links>
       <LinkItem>
         <Home size={20} />
-        <a href="#">Home</a>
+        <Link to="/">Home</Link>
       </LinkItem>
       <LinkItem>
         <UserCircle2 size={20} />
@@ -37,19 +38,11 @@ const MenuBar = () => (
       </LinkItem>
       <LinkItem>
         <LayoutDashboard size={20} />
-        <a href="#">Dashboard</a>
+        <Link to="/skills">Habilidades</Link>
       </LinkItem>
     </Links>
     <Redes>
-      <a href="https://github.com/Angelo-pdr">
-        <img src={gitHubLight} alt="github" />
-      </a>
-      <a href="angelopedrosa00@gmail.com">
-        <img src={gmailLight} alt="gmail" />
-      </a>
-      <a href="https://www.linkedin.com/in/angelo-pedrosa/">
-        <img src={linkedinLight} alt="linkedin" />
-      </a>
+      <h3>&copy;2023 Portfolio - Todos direitos reservados</h3>
     </Redes>
   </Container>
 )

@@ -4,13 +4,14 @@ import { cores } from '../../models/cores'
 export const Container = styled.div`
   max-width: 250px;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: ${cores.white};
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
 `
 
 export const AreaImg = styled.div`
@@ -23,10 +24,10 @@ export const AreaImg = styled.div`
 
   .teste {
     background-color: black;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 `
 export const Title = styled.h1`
@@ -40,16 +41,20 @@ export const Links = styled.ul`
 export const LinkItem = styled.li`
   display: flex;
   align-items: center;
-  padding: 0.5rem 2.5rem;
+  padding: 0.8rem 2.5rem;
+  padding-top: 0px;
 
   a {
     font-size: 20px;
     margin-left: 0.5rem;
+    cursor: pointer;
   }
 `
-export const Redes = styled.footer`
+export const Redes = styled.div`
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+
+  h3 {
+    text-align: center;
+    font-weight: 500;
+  }
 `

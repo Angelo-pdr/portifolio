@@ -1,10 +1,5 @@
 import MenuBar from '../../components/Menubar'
 
-const Home = () => (
-  <div className="container">
-    <MenuBar />
-    <div className="content">home</div>
-  </div>
-)
+const Home = () => <div className="content">home</div>
 
 export default Home
