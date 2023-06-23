@@ -12,8 +12,6 @@ type technoProps = {
   techno: TechnologyProps
 }
 
-
-
 const Technology = ({ techno }: technoProps) => (
   <Container>
     <CardImg>

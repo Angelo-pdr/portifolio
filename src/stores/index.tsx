@@ -1,11 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { technoFilter } from './reducers/tecno'
 
 import TechnoReducer from './reducers/tecno'
+import ProjectReducer from './reducers/proje'
 
 export const store = configureStore({
   reducer: {
-    technos: TechnoReducer
+    technos: TechnoReducer,
+    proje: ProjectReducer
   }
 })
 

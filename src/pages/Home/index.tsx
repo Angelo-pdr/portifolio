@@ -1,5 +1,6 @@
-import MenuBar from '../../components/Menubar'
-
-const Home = () => <div className="content">home</div>
+import React from "react"
+const Home = () => (
+  <div className="content">home</div>
+)
 
 export default Home

@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { cores } from '../../models/cores'
-import { Percent } from 'lucide-react'
 
 type Props = {
   percentage: number
@@ -14,7 +13,7 @@ export const Container = styled.div`
   border-radius: 0.8rem;
   box-shadow: 1px 1px 4px 1px ${cores.shadowLigh};
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
   margin-bottom: 1rem;
 `
 export const CardImg = styled.div`

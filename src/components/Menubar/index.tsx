@@ -8,9 +8,6 @@ import {
   UserCircle2
 } from 'lucide-react'
 
-import gitHubLight from '../../asserts/icons/bg-light/github.png'
-import gmailLight from '../../asserts/icons/bg-light/gmail.png'
-import linkedinLight from '../../asserts/icons/bg-light/linkedin.png'
 
 const MenuBar = () => (
   <Container>
@@ -34,7 +31,7 @@ const MenuBar = () => (
       </LinkItem>
       <LinkItem>
         <FolderOpen size={20} />
-        <a href="#">Projetos</a>
+        <Link to="/project">Projetos</Link>
       </LinkItem>
       <LinkItem>
         <LayoutDashboard size={20} />

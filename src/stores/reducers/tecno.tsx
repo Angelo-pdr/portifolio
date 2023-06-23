@@ -124,13 +124,6 @@ const initialState: technologyState = {
     },
     {
       id: 15,
-      img: `${grunt}`,
-      percentage: 25,
-      title: 'Grunt',
-      type: 'frot-end'
-    },
-    {
-      id: 16,
       img: `${testing}`,
       percentage: 20,
       title: 'Testing Library',
