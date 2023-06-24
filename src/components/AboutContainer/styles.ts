@@ -26,43 +26,25 @@ export const AreaText = styled.div`
   width: 100%;
   height: 50%;
 
-  h2 {
+  h3 {
     margin: 0.5rem 0px;
   }
 
   P {
     margin-bottom: 0.5rem;
+    text-align: justify;
   }
 `
 
 export const AreaImg = styled.div`
   width: 100%;
   height: 80%;
-  margin-left: 2.5rem;
+
   img {
+    margin-left: 2.5rem;
     max-width: 90%;
     height: 100%;
     display: block;
     object-fit: contain;
-  }
-`
-export const Button = styled.button`
-  max-width: 250px;
-  width: 100%;
-  height: 35px;
-  font-size: 1rem;
-  text-align: center;
-  border-radius: 0.7rem;
-  cursor: pointer;
-  font-weight: bold;
-  padding: 0.3rem 1rem;
-  background-color: transparent;
-  border: 2px solid ${cores.black};
-  color: ${cores.black};
-  transition: ease 0.8s;
-
-  &:hover {
-    background-color: ${cores.black};
-    color: ${cores.white};
   }
 `

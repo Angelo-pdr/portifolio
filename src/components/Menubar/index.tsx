@@ -22,7 +22,7 @@ const MenuBar = () => (
       </LinkItem>
       <LinkItem>
         <UserCircle2 size={20} />
-        <a href="#">Sobre</a>
+        <Link to="/about">Sobre</Link>
       </LinkItem>
       <LinkItem>
         <PhoneCall size={20} />
