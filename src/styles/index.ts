@@ -14,7 +14,7 @@ const GlobalCss = createGlobalStyle`
 
   body{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: ${cores.bgLight};
   }
 
@@ -22,7 +22,7 @@ const GlobalCss = createGlobalStyle`
     display: flex;
     flex-direction: row;
     max-width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
   }
 

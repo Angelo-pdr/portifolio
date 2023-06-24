@@ -1,5 +1,5 @@
-import ProjectProps from "../../models/proje"
-import Tag from "../Tag"
+import ProjectProps from '../../models/proje'
+import Tag from '../Tag'
 
 import {
   Container,
@@ -15,7 +15,7 @@ type Props = {
   proje: ProjectProps
 }
 
-const Project = ({proje }: Props) => (
+const Project = ({ proje }: Props) => (
   <Container>
     <CardImg>
       <img src={proje.img} alt="lista de contatos" />
@@ -23,16 +23,19 @@ const Project = ({proje }: Props) => (
     <CardBody>
       <Title>{proje.title}</Title>
       <CardType>
-        {proje.technos.map((techno) =>(
-          <Tag type="tag" key={techno}>{techno}</Tag>))}
+        {proje.technos.map((techno) => (
+          <Tag type="tag" key={techno}>
+            {techno}
+          </Tag>
+        ))}
       </CardType>
-      <About>
-        {proje.about}
-      </About>
+      <About>{proje.about}</About>
       <CardBottom>
         <div>
           {proje.links.map((item) => (
-            <Tag type="link" key={item.name} link={item.link} >{item.name}</Tag>
+            <Tag type="link" key={item.name} link={item.link}>
+              {item.name}
+            </Tag>
           ))}
         </div>
       </CardBottom>

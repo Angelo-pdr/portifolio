@@ -7,7 +7,6 @@ import landing_page_pet_shop from '../../asserts/projetosImgs/landing_page_pet_s
 import lista_de_contatos from '../../asserts/projetosImgs/lista_de_contatos.png'
 import ProjectProps from '../../models/proje'
 
-
 type ProjectState = {
   projects: ProjectProps[]
 }
@@ -17,9 +16,10 @@ const initialState: ProjectState = {
     {
       id: 1,
       img: `${evento_ficticio}`,
-      technos: ["JavaScript", "Less", "Grunt"],
+      technos: ['JavaScript', 'Less', 'Grunt'],
       title: 'Landing Page Aniversário',
-      about: 'Uma landing page responsiva para o meu aniversário, com um slideshow e uma contagem regressiva até a data do aniversário, usando uma data fictícia.',
+      about:
+        'Uma landing page responsiva para o meu aniversário, com um slideshow e uma contagem regressiva até a data do aniversário, usando uma data fictícia.',
       links: [
         {
           link: 'https://github.com/Angelo-pdr/evento_ficticio',
@@ -34,9 +34,10 @@ const initialState: ProjectState = {
     {
       id: 2,
       img: `${lading_page_avatar2}`,
-      technos: ["JavaScript", "Sass", "Gulp"],
+      technos: ['JavaScript', 'Sass', 'Gulp'],
       title: 'Landing Page Avatar 2',
-      about: 'Uma landing page responsiva do filme Avatar 2, com um slideshow, tabs, um menu expansível e uma contagem regressiva até o lançamento do filme com uma data fictícia',
+      about:
+        'Uma landing page responsiva do filme Avatar 2, com um slideshow, tabs, um menu expansível e uma contagem regressiva até o lançamento do filme com uma data fictícia',
       links: [
         {
           link: 'https://github.com/Angelo-pdr/landing_page_avatar2',
@@ -53,22 +54,26 @@ const initialState: ProjectState = {
       img: `${lista_de_contatos}`,
       technos: ['TypeScript', 'Styled-components', 'Redux', 'React-Router'],
       title: 'lista_de_contatos',
-      about: 'Uma lista de contatos onde adicionamos novos contatos, também podemos remover contatos e adicionar contatos aos favoritos.',
-      links: [{
-        link: 'https://github.com/Angelo-pdr/lista_de_contatos/',
-        name: 'GitHub'
-      }, {
-        link: 'https://lista-de-contatos-five.vercel.app/',
-        name: 'View'
-      }
-    ]
+      about:
+        'Uma lista de contatos onde adicionamos novos contatos, também podemos remover contatos e adicionar contatos aos favoritos.',
+      links: [
+        {
+          link: 'https://github.com/Angelo-pdr/lista_de_contatos/',
+          name: 'GitHub'
+        },
+        {
+          link: 'https://lista-de-contatos-five.vercel.app/',
+          name: 'View'
+        }
+      ]
     },
     {
       id: 4,
       img: `${lading_page_cinema}`,
-      technos: ["JavaScript", "Css", "Bootstrap"],
+      technos: ['JavaScript', 'Css', 'Bootstrap'],
       title: 'Uma landing page Cinema',
-      about: 'Uma landing page responsiva de um cinema de pet shop, com um slideshow e filmes.',
+      about:
+        'Uma landing page responsiva de um cinema, com um slideshow e filmes.',
       links: [
         {
           link: 'https://github.com/Angelo-pdr/landi-page-cinema',
@@ -83,9 +88,10 @@ const initialState: ProjectState = {
     {
       id: 5,
       img: `${landing_page_pet_shop}`,
-      technos: ["JavaScript", "Css", "Bootstrap"],
+      technos: ['JavaScript', 'Css', 'Bootstrap'],
       title: 'e-commerce de Pet Shop',
-      about: 'Uma landing page responsiva de um e-commerce de pet shop, com um slideshow e produtos.',
+      about:
+        'Uma landing page responsiva de um e-commerce de pet shop, com um slideshow e produtos.',
       links: [
         {
           link: 'https://github.com/Angelo-pdr/landing-page-pet-shop',
@@ -96,8 +102,7 @@ const initialState: ProjectState = {
           name: 'View'
         }
       ]
-    },
-
+    }
   ]
 }
 

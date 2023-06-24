@@ -53,7 +53,6 @@ export const CardType = styled.div`
 
   ${TagContainer} {
     display: inline-block;
-
   }
 `
 export const CardBottom = styled.div`

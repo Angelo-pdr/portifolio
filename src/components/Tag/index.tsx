@@ -8,14 +8,10 @@ export type Props = {
 }
 
 const Tag = ({ type = 'tag', children, link }: Props) => {
-  if(type == 'tag'){
-    return(
-      <TagContainer >{children}</TagContainer>
-    )
+  if (type == 'tag') {
+    return <TagContainer>{children}</TagContainer>
   }
-  return(
-    <Link href={link} >{children}</Link>
-  )
+  return <Link href={link}>{children}</Link>
 }
 
 export default Tag

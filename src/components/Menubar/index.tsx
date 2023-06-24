@@ -8,7 +8,6 @@ import {
   UserCircle2
 } from 'lucide-react'
 
-
 const MenuBar = () => (
   <Container>
     <AreaImg>
