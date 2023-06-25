@@ -13,7 +13,6 @@ const MenuBar = () => (
     <AreaImg>
       <div className="teste"></div>
       <Title>Angelo Pedrosa</Title>
-      <Title>Desenvolvedor Full Stack</Title>
     </AreaImg>
     <Links>
       <LinkItem>
@@ -26,7 +25,7 @@ const MenuBar = () => (
       </LinkItem>
       <LinkItem>
         <PhoneCall size={20} />
-        <a href="#">Contato</a>
+        <Link to="/contact">Contato</Link>
       </LinkItem>
       <LinkItem>
         <FolderOpen size={20} />

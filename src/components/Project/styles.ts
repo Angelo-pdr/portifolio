@@ -6,7 +6,7 @@ export const Container = styled.div`
   width: 80%;
   max-height: 100%;
   background-color: ${cores.white};
-  padding .5rem 1rem;
+  padding .5rem;
   border-radius: 0.8rem;
   box-shadow: 1px 1px 4px 1px ${cores.shadowLigh};
   margin-bottom: 1rem;
@@ -14,12 +14,12 @@ export const Container = styled.div`
 export const CardImg = styled.div`
   width: 100%;
   height: 100%;
-  display: block;
   img {
     object-fit: cover;
     display: block;
     width: 100%;
     height: 100%;
+    border-radius: 0.5rem;
   }
 `
 

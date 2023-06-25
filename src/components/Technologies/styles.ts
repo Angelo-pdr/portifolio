@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  max-width: 100%;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 `
 export const AreaSearch = styled.div`
   width: 900px;

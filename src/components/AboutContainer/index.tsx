@@ -8,9 +8,10 @@ const AboutContainer = () => (
       <AreaText>
         <h3>Meu nome é Angelo da Silva Pedrosa</h3>
         <p>
-          Desenvolvedor de software web e mobile, apaixonado pelo mundo da tecnologia.
-          Gosto de resolver problemas, quebrando-os em pequenos pedaços e resolvendo-os
-          pouco a pouco. Sou entusiasta dos métodos ágeis, de ambientes flexíveis e desafiadores.
+          Desenvolvedor de software web e mobile, apaixonado pelo mundo da
+          tecnologia. Gosto de resolver problemas, quebrando-os em pequenos
+          pedaços e resolvendo-os pouco a pouco. Sou entusiasta dos métodos
+          ágeis, de ambientes flexíveis e desafiadores.
         </p>
         <br />
         <p>
