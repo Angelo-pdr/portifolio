@@ -8,13 +8,22 @@ import {
   Redes
 } from './styles'
 
+import { useSelector } from 'react-redux'
+import { RootState } from '../../stores'
+
 import linkedin_light from '../../asserts/icons/bg-light/linkedin_light.png'
 import github_light from '../../asserts/icons/bg-light/github_light.png'
 import whatsapp_light from '../../asserts/icons/bg-light/what_light.png'
+
+import linkedin_dark from '../../asserts/icons/bg-black/linkedin_black.png'
+import github_dark from '../../asserts/icons/bg-black/github _black.png'
+import whatsapp_dark from '../../asserts/icons/bg-black/what_black.png'
+
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 
 const Form = () => {
+  const { buttonDark } = useSelector((state: RootState) => state.mode)
   const [email, setEmail] = useState('')
   const [name, setname] = useState('')
   const [message, setMessage] = useState('')
@@ -60,7 +69,20 @@ const Form = () => {
             Preencha o formulário para entrarmos em contato por e-mail ou clique
             nos ícones abaixo para entrarmos em contato.
           </p>
-          <Redes>
+          {buttonDark ? (
+            <Redes>
+            <a href="https://www.linkedin.com/in/angelo-pedrosa/">
+              <img src={linkedin_dark} alt="linkedin" />
+            </a>
+            <a href="https://github.com/Angelo-pdr">
+              <img src={github_dark} alt="github" />
+            </a>
+            <a href="https://wa.me/5531975732125">
+              <img src={whatsapp_dark} alt="whatsapp" />
+            </a>
+          </Redes>
+          ) : (
+            <Redes>
             <a href="https://www.linkedin.com/in/angelo-pedrosa/">
               <img src={linkedin_light} alt="linkedin" />
             </a>
@@ -71,8 +93,11 @@ const Form = () => {
               <img src={whatsapp_light} alt="whatsapp" />
             </a>
           </Redes>
+          )
+
+          }
         </AreaText>
-        <FormArea onSubmit={sendEmail}>
+        <FormArea mode={buttonDark} onSubmit={sendEmail}>
           <h1>Contato</h1>
           <Input
             type="text"

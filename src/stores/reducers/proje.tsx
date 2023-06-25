@@ -110,14 +110,7 @@ const technosSlice = createSlice({
   name: 'technologies',
   initialState,
 
-  reducers: {
-    projectFilter: (state, action: PayloadAction<string>) => {
-      state.projects = state.projects.filter(
-        (techno) => techno.title !== action.payload
-      )
-    }
-  }
+  reducers: {}
 })
 
-export const { projectFilter } = technosSlice.actions
 export default technosSlice.reducer

@@ -2,11 +2,13 @@ import { configureStore } from '@reduxjs/toolkit'
 
 import TechnoReducer from './reducers/tecno'
 import ProjectReducer from './reducers/proje'
+import ButtonReducer from './reducers/buttonDark'
 
 export const store = configureStore({
   reducer: {
     technos: TechnoReducer,
-    proje: ProjectReducer
+    proje: ProjectReducer,
+    mode: ButtonReducer
   }
 })
 

@@ -1,21 +1,23 @@
 import { createGlobalStyle } from 'styled-components'
 import { cores } from '../models/cores'
+import { Props } from "../models/modelDark"
 
-const GlobalCss = createGlobalStyle`
+const GlobalCss = createGlobalStyle<Props>`
  *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    color: ${cores.black};
+    color: ${(props) => (props.mode ? cores.white : cores.black)};
     list-style: none;
     text-decoration: none;
     font-family: Montserrat, sans-serif;
+    transition: ease 0.6s;
   }
 
   body{
     width: 100%;
     height: 100vh;
-    background-color: ${cores.bgLight};
+    background-color: ${ (props) => props.mode ? cores.bgDark : cores.bgLight };
   }
 
   .container{

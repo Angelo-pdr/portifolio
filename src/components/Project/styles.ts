@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 import { cores } from '../../models/cores'
 import { Link, TagContainer } from '../Tag/styles'
+import { Props } from "../../models/modelDark"
 
-export const Container = styled.div`
+export const Container = styled.div<Props>`
   width: 80%;
   max-height: 100%;
-  background-color: ${cores.white};
+  background-color: ${(props) => (props.mode ? cores.black : cores.white)};
   padding .5rem;
   border-radius: 0.8rem;
-  box-shadow: 1px 1px 4px 1px ${cores.shadowLigh};
+  box-shadow: 1px 1px 4px 1px ${(props) => (props.mode ? cores.shadowDark : cores.shadowLigh)};
   margin-bottom: 1rem;
 `
 export const CardImg = styled.div`

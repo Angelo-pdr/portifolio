@@ -1,10 +1,14 @@
 import { Container, Content, AreaText, AreaImg } from './styles'
 
 import noteb from '../../asserts/noteb.png'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../stores'
 
-const AboutContainer = () => (
-  <Container>
-    <Content>
+const AboutContainer = () => {
+  const { buttonDark } = useSelector((state: RootState) => state.mode)
+  return(
+    <Container>
+    <Content mode={buttonDark}>
       <AreaText>
         <h3>Meu nome é Angelo da Silva Pedrosa</h3>
         <p>
@@ -26,6 +30,7 @@ const AboutContainer = () => (
       </AreaImg>
     </Content>
   </Container>
-)
+  )
+}
 
 export default AboutContainer

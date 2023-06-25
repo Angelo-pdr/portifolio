@@ -3,15 +3,16 @@ import { cores } from '../../models/cores'
 
 type Props = {
   percentage: number
+  mode: boolean
 }
 
-export const Container = styled.div`
+export const Container = styled.div<Omit<Props, "percentage">>`
   min-width: 100%;
   max-height: 110px;
-  background-color: ${cores.white};
+  background-color: ${(props) => (props.mode ? cores.black : cores.white)};
   padding .5rem 1rem;
   border-radius: 0.8rem;
-  box-shadow: 1px 1px 4px 1px ${cores.shadowLigh};
+  box-shadow: 1px 1px 4px 1px $${(props) => (props.mode ? cores.shadowDark : cores.shadowLigh)};
   display: flex;
   gap: 0.5rem;
   margin-bottom: 1rem;
@@ -60,7 +61,7 @@ export const CardBottom = styled.div<Props>`
   .loading {
     width: 100%;
     height: 10px;
-    background-color: #f2f2f2;
+    background-color: ${(props) => (props.mode ? cores.shadowDark : cores.shadowLigh)};
     border-radius: 0.8rem;
 
     .total {
@@ -68,7 +69,7 @@ export const CardBottom = styled.div<Props>`
         props.percentage != 0 ? `${props.percentage}%` : '0%'};
       height: 100%;
       border-radius: 0.8rem;
-      background-color: ${cores.black};
+      background-color: ${(props) => (props.mode ? cores.white : cores.black)};
     }
   }
 `

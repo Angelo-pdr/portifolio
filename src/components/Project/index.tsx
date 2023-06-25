@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux'
 import ProjectProps from '../../models/proje'
 import Tag from '../Tag'
 
@@ -10,13 +11,16 @@ import {
   About,
   Title
 } from './styles'
+import { RootState } from '../../stores'
 
 type Props = {
   proje: ProjectProps
 }
 
-const Project = ({ proje }: Props) => (
-  <Container>
+const Project = ({ proje }: Props) => {
+  const { buttonDark } = useSelector((state: RootState) => state.mode)
+  return(
+    <Container mode={buttonDark}>
     <CardImg>
       <img src={proje.img} alt="lista de contatos" />
     </CardImg>
@@ -41,6 +45,7 @@ const Project = ({ proje }: Props) => (
       </CardBottom>
     </CardBody>
   </Container>
-)
+  )
+}
 
 export default Project

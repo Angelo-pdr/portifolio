@@ -1,5 +1,7 @@
 import React from 'react'
 import { TagContainer, Link } from './styles'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../stores'
 
 export type Props = {
   type: 'link' | 'tag'
@@ -8,10 +10,11 @@ export type Props = {
 }
 
 const Tag = ({ type = 'tag', children, link }: Props) => {
+  const { buttonDark } = useSelector((state: RootState) => state.mode)
   if (type == 'tag') {
-    return <TagContainer>{children}</TagContainer>
+    return <TagContainer mode={buttonDark}>{children}</TagContainer>
   }
-  return <Link href={link}>{children}</Link>
+  return <Link mode={buttonDark} href={link}>{children}</Link>
 }
 
 export default Tag

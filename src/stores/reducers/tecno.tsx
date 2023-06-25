@@ -143,14 +143,7 @@ const technosSlice = createSlice({
   name: 'technologies',
   initialState,
 
-  reducers: {
-    technoFilter: (state, action: PayloadAction<string>) => {
-      state.technos = state.technos.filter(
-        (techno) => techno.title !== action.payload
-      )
-    }
-  }
+  reducers: {}
 })
 
-export const { technoFilter } = technosSlice.actions
 export default technosSlice.reducer

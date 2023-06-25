@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { cores } from '../../models/cores'
+import { Props } from "../../models/modelDark"
 
 export const Container = styled.div`
   width: 100%;
@@ -43,14 +44,14 @@ export const Redes = styled.div`
   }
 `
 
-export const FormArea = styled.form`
+export const FormArea = styled.form<Props>`
   width: 100%;
   max-height: 450px;
   height: 100%;
   padding 1rem;
   border-radius: 0.8rem;
-  box-shadow: 1px 1px 4px 1px ${cores.shadowLigh};
-  background-color: ${cores.white};
+  box-shadow: 1px 1px 4px 1px ${(props) => (props.mode ? cores.shadowDark : cores.shadowLigh)};
+  background-color: ${(props) => (props.mode ? cores.black : cores.white)};
   text-align: center;
 
   h1 {
@@ -66,8 +67,8 @@ export const FormArea = styled.form`
     font-weight: bold;
     padding: 0.5rem 1rem;
     background-color: transparent;
-    border: 1px solid ${cores.black};
-    color: ${cores.black};
+    border: 1px solid ${(props) => (props.mode ? cores.white : cores.black)};
+    color: ${(props) => (props.mode ? cores.white : cores.black)};
     transition: ease 0.8s;
 
     &:hover {

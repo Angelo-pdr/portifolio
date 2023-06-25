@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 import { cores } from '../../models/cores'
+import { Props } from "../../models/modelDark"
 
-export const Container = styled.div`
+
+export const Container = styled.div<Props>`
   max-width: 250px;
   width: 100%;
   height: 100vh;
-  background-color: ${cores.white};
+  background-color: ${(props) => (props.mode ? cores.black : cores.white)};
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -33,6 +35,37 @@ export const AreaImg = styled.div`
 export const Title = styled.h1`
   font-size: 1rem;
   font-weight: 500;
+  text-align: center;
+  margin-bottom: 0.5rem;
+`
+
+export const DarkMode = styled.div`
+  width: 50px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid ${cores.black};
+  border-radius: 1rem;
+  position: relative;
+  &.active {
+    border: 1px solid ${cores.white};
+  }
+
+  .buttonIcon {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: ${cores.black};
+    top: 50%;
+    left: 1px;
+    transform: translateY(-50%);
+  }
+
+  .buttonIcon.active {
+    background-color: ${cores.white};
+    left: 32px;
+  }
 `
 
 export const Links = styled.ul`
@@ -48,13 +81,6 @@ export const LinkItem = styled.li`
     font-size: 20px;
     margin-left: 0.5rem;
     cursor: pointer;
-  }
-`
-export const Redes = styled.div`
-  width: 100%;
-
-  h3 {
-    text-align: center;
-    font-weight: 500;
+    transition: ease 0.6s;
   }
 `
