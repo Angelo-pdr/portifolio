@@ -19,32 +19,32 @@ type Props = {
 
 const Project = ({ proje }: Props) => {
   const { buttonDark } = useSelector((state: RootState) => state.mode)
-  return(
+  return (
     <Container mode={buttonDark}>
-    <CardImg>
-      <img src={proje.img} alt="lista de contatos" />
-    </CardImg>
-    <CardBody>
-      <Title>{proje.title}</Title>
-      <CardType>
-        {proje.technos.map((techno) => (
-          <Tag type="tag" key={techno}>
-            {techno}
-          </Tag>
-        ))}
-      </CardType>
-      <About>{proje.about}</About>
-      <CardBottom>
-        <div>
-          {proje.links.map((item) => (
-            <Tag type="link" key={item.name} link={item.link}>
-              {item.name}
+      <CardImg>
+        <img src={proje.img} alt="lista de contatos" />
+      </CardImg>
+      <CardBody>
+        <Title>{proje.title}</Title>
+        <CardType>
+          {proje.technos.map((techno) => (
+            <Tag type="tag" key={techno}>
+              {techno}
             </Tag>
           ))}
-        </div>
-      </CardBottom>
-    </CardBody>
-  </Container>
+        </CardType>
+        <About>{proje.about}</About>
+        <CardBottom>
+          <div>
+            {proje.links.map((item) => (
+              <Tag type="link" key={item.name} link={item.link}>
+                {item.name}
+              </Tag>
+            ))}
+          </div>
+        </CardBottom>
+      </CardBody>
+    </Container>
   )
 }
 

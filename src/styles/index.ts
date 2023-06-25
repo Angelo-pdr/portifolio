@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import { cores } from '../models/cores'
-import { Props } from "../models/modelDark"
+import { Props } from '../models/modelDark'
 
 const GlobalCss = createGlobalStyle<Props>`
  *{
@@ -17,7 +17,8 @@ const GlobalCss = createGlobalStyle<Props>`
   body{
     width: 100%;
     height: 100vh;
-    background-color: ${ (props) => props.mode ? cores.bgDark : cores.bgLight };
+    background-color: ${(props) => (props.mode ? cores.bgDark : cores.bgLight)};
+    overflow-x: hidden;
   }
 
   .container{
@@ -26,6 +27,13 @@ const GlobalCss = createGlobalStyle<Props>`
     width: 100%;
     height: 100vh;
     position: relative;
+
+    @media (max-width: 1150px) {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: inherit;
+    }
   }
 
   .content{
@@ -34,6 +42,20 @@ const GlobalCss = createGlobalStyle<Props>`
     position: relative;
     margin-left: 16.3rem;
     padding: .8rem 1rem;
+
+    @media (max-width: 1115px) {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      padding: 0px .5rem;
+      margin: 0px;
+      position: inherit;
+    }
+
+    @media (max-width: 830px) {
+      padding: 0px;
+      height: 0%;
+    }
   }
  `
 

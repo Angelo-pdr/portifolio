@@ -16,24 +16,24 @@ type technoProps = {
 
 const Technology = ({ techno }: technoProps) => {
   const { buttonDark } = useSelector((state: RootState) => state.mode)
-  return(
+  return (
     <Container mode={buttonDark}>
-    <CardImg>
-      <img src={techno.img} alt="" />
-    </CardImg>
-    <CardBody>
-      <CardTop>
-        <p>{techno.title}</p>
-        <p>{techno.percentage}%</p>
-      </CardTop>
-      <CardType>{techno.type}</CardType>
-      <CardBottom percentage={techno.percentage} mode={buttonDark}>
-        <div className="loading">
-          <div className="total"></div>
-        </div>
-      </CardBottom>
-    </CardBody>
-  </Container>
+      <CardImg>
+        <img src={techno.img} alt="" />
+      </CardImg>
+      <CardBody>
+        <CardTop>
+          <p>{techno.title}</p>
+          <p>{techno.percentage}%</p>
+        </CardTop>
+        <CardType>{techno.type}</CardType>
+        <CardBottom percentage={techno.percentage} mode={buttonDark}>
+          <div className="loading">
+            <div className="total"></div>
+          </div>
+        </CardBottom>
+      </CardBody>
+    </Container>
   )
 }
 export default Technology

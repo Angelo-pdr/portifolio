@@ -6,13 +6,14 @@ type Props = {
   mode: boolean
 }
 
-export const Container = styled.div<Omit<Props, "percentage">>`
+export const Container = styled.div<Omit<Props, 'percentage'>>`
   min-width: 100%;
   max-height: 110px;
   background-color: ${(props) => (props.mode ? cores.black : cores.white)};
   padding .5rem 1rem;
   border-radius: 0.8rem;
-  box-shadow: 1px 1px 4px 1px $${(props) => (props.mode ? cores.shadowDark : cores.shadowLigh)};
+  box-shadow: 1px 1px 4px 1px $${(props) =>
+    props.mode ? cores.shadowDark : cores.shadowLigh};
   display: flex;
   gap: 0.5rem;
   margin-bottom: 1rem;
@@ -61,7 +62,8 @@ export const CardBottom = styled.div<Props>`
   .loading {
     width: 100%;
     height: 10px;
-    background-color: ${(props) => (props.mode ? cores.shadowDark : cores.shadowLigh)};
+    background-color: ${(props) =>
+      props.mode ? cores.shadowDark : cores.shadowLigh};
     border-radius: 0.8rem;
 
     .total {

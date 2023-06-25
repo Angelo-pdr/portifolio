@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { cores } from '../../models/cores'
-import { Props } from "../../models/modelDark"
+import { Props } from '../../models/modelDark'
 
 export const TagContainer = styled.div<Props>`
   background-color: ${(props) => (props.mode ? cores.white : cores.black)};

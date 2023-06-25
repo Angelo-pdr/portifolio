@@ -71,31 +71,29 @@ const Form = () => {
           </p>
           {buttonDark ? (
             <Redes>
-            <a href="https://www.linkedin.com/in/angelo-pedrosa/">
-              <img src={linkedin_dark} alt="linkedin" />
-            </a>
-            <a href="https://github.com/Angelo-pdr">
-              <img src={github_dark} alt="github" />
-            </a>
-            <a href="https://wa.me/5531975732125">
-              <img src={whatsapp_dark} alt="whatsapp" />
-            </a>
-          </Redes>
+              <a href="https://www.linkedin.com/in/angelo-pedrosa/">
+                <img src={linkedin_dark} alt="linkedin" />
+              </a>
+              <a href="https://github.com/Angelo-pdr">
+                <img src={github_dark} alt="github" />
+              </a>
+              <a href="https://wa.me/5531975732125">
+                <img src={whatsapp_dark} alt="whatsapp" />
+              </a>
+            </Redes>
           ) : (
             <Redes>
-            <a href="https://www.linkedin.com/in/angelo-pedrosa/">
-              <img src={linkedin_light} alt="linkedin" />
-            </a>
-            <a href="https://github.com/Angelo-pdr">
-              <img src={github_light} alt="github" />
-            </a>
-            <a href="https://wa.me/5531975732125">
-              <img src={whatsapp_light} alt="whatsapp" />
-            </a>
-          </Redes>
-          )
-
-          }
+              <a href="https://www.linkedin.com/in/angelo-pedrosa/">
+                <img src={linkedin_light} alt="linkedin" />
+              </a>
+              <a href="https://github.com/Angelo-pdr">
+                <img src={github_light} alt="github" />
+              </a>
+              <a href="https://wa.me/5531975732125">
+                <img src={whatsapp_light} alt="whatsapp" />
+              </a>
+            </Redes>
+          )}
         </AreaText>
         <FormArea mode={buttonDark} onSubmit={sendEmail}>
           <h1>Contato</h1>

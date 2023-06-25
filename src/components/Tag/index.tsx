@@ -14,7 +14,11 @@ const Tag = ({ type = 'tag', children, link }: Props) => {
   if (type == 'tag') {
     return <TagContainer mode={buttonDark}>{children}</TagContainer>
   }
-  return <Link mode={buttonDark} href={link}>{children}</Link>
+  return (
+    <Link mode={buttonDark} href={link}>
+      {children}
+    </Link>
+  )
 }
 
 export default Tag

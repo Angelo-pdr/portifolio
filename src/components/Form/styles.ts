@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { cores } from '../../models/cores'
-import { Props } from "../../models/modelDark"
+import { Props } from '../../models/modelDark'
 
 export const Container = styled.div`
   width: 100%;
@@ -8,6 +8,9 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 830px) {
+    padding: 0px;
+  }
 `
 export const Content = styled.div`
   max-width: 1024px;
@@ -18,6 +21,13 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
+
+  @media (max-width: 830px) {
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 `
 export const AreaText = styled.div`
   width: 100%;
@@ -50,9 +60,17 @@ export const FormArea = styled.form<Props>`
   height: 100%;
   padding 1rem;
   border-radius: 0.8rem;
-  box-shadow: 1px 1px 4px 1px ${(props) => (props.mode ? cores.shadowDark : cores.shadowLigh)};
+  box-shadow: 1px 1px 4px 1px ${(props) =>
+    props.mode ? cores.shadowDark : cores.shadowLigh};
   background-color: ${(props) => (props.mode ? cores.black : cores.white)};
   text-align: center;
+
+  @media (max-width: 830px) {
+    width: 100%;
+    min-height: 100%;
+    border-radius: .5rem .5rem 0px .0px;
+    padding .5rem;
+  }
 
   h1 {
     margin-bottom: .5rem;
@@ -96,4 +114,8 @@ export const Textarea = styled.textarea`
   border-radius: .5rem;
   margin-bottom: 1rem;
   border: 1px solid ${cores.black}};
+
+  @media (max-width: 700px) {
+    height: 45%;
+  }
 `
