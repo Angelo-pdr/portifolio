@@ -3,6 +3,10 @@ import styled from 'styled-components'
 export const Container = styled.div`
   width: 100%;
   height: 100%;
+  @media (max-width: 830px) {
+    width: 100%;
+    padding: 0px .5rem;
+  }
 `
 export const AreaSearch = styled.div`
   width: 900px;

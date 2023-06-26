@@ -106,7 +106,7 @@ export const Links = styled.ul<Props>`
     height: 90vh;
     background: ${(props) => (props.mode ? cores.black : cores.white)};
     transform: translateX(100%);
-    border-radius: .5rem;
+    border-radius: .5rem 0px  0px.5rem ;
   }
 
   &.active{
