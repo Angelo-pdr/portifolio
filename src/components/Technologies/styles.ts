@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 100%;
   @media (max-width: 830px) {
     width: 100%;
-    padding: 0px .5rem;
+    padding: 0px 0.5rem;
   }
 `
 export const AreaSearch = styled.div`

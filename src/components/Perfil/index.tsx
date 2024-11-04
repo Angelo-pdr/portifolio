@@ -1,4 +1,4 @@
-import { Container, Content, AreaText, AreaImg, Button } from './styles'
+import { Container, Content, AreaText, AreaImg } from './styles'
 
 import pc from '../../asserts/pc.png'
 import { useSelector } from 'react-redux'
@@ -16,7 +16,6 @@ const Perfil = () => {
             Olá mundo! Este é o meu portfólio pessoal, onde você pode encontrar
             um pouco mais sobre mim e o meu trabalho.
           </p>
-          <Button mode={buttonDark}>BAIXAR CURRÍCULO</Button>
         </AreaText>
         <AreaImg>
           <img src={pc} alt="Home no computador" />

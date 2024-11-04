@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import perfil from '../../asserts/perfil.jpg'
 import {
   Container,
   AreaImg,
@@ -32,7 +33,7 @@ const MenuBar = () => {
   return (
     <Container mode={buttonDark}>
       <AreaImg>
-        <div className="teste"></div>
+        <img className="teste" src={perfil} />
         <Title>Angelo Pedrosa</Title>
         <DarkMode
           onClick={() => dispatch(changeColor(!buttonDark))}
@@ -49,8 +50,8 @@ const MenuBar = () => {
         <div className="lien3"></div>
       </MobileMenu>
       <nav>
-        <Links mode={buttonDark} className={showMenu ? 'active': ''}>
-          <LinkItem className={showMenu ? 'active': ''}>
+        <Links mode={buttonDark} className={showMenu ? 'active' : ''}>
+          <LinkItem className={showMenu ? 'active' : ''}>
             <Home
               size={20}
               style={{ transition: 'ease .6s' }}
@@ -58,7 +59,7 @@ const MenuBar = () => {
             />
             <Link to="/">Home</Link>
           </LinkItem>
-          <LinkItem className={showMenu ? 'active': ''}>
+          <LinkItem className={showMenu ? 'active' : ''}>
             <UserCircle2
               size={20}
               style={{ transition: 'ease .6s' }}
@@ -66,7 +67,7 @@ const MenuBar = () => {
             />
             <Link to="/about">Sobre</Link>
           </LinkItem>
-          <LinkItem className={showMenu ? 'active': ''}>
+          <LinkItem className={showMenu ? 'active' : ''}>
             <PhoneCall
               size={20}
               style={{ transition: 'ease .6s' }}
@@ -74,7 +75,7 @@ const MenuBar = () => {
             />
             <Link to="/contact">Contato</Link>
           </LinkItem>
-          <LinkItem className={showMenu ? 'active': ''}>
+          <LinkItem className={showMenu ? 'active' : ''}>
             <FolderOpen
               size={20}
               style={{ transition: 'ease .6s' }}
@@ -82,7 +83,7 @@ const MenuBar = () => {
             />
             <Link to="/project">Projetos</Link>
           </LinkItem>
-          <LinkItem className={showMenu ? 'active': ''}>
+          <LinkItem className={showMenu ? 'active' : ''}>
             <LayoutDashboard
               size={20}
               style={{ transition: 'ease .6s' }}

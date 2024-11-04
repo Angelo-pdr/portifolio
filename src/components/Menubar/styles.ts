@@ -64,6 +64,9 @@ export const AreaImg = styled.div`
     @media (max-width: 1115px) {
       display: none;
     }
+    img {
+      width: 100%;
+    }
   }
 `
 export const Title = styled.h1`
@@ -106,10 +109,10 @@ export const Links = styled.ul<Props>`
     height: 90vh;
     background: ${(props) => (props.mode ? cores.black : cores.white)};
     transform: translateX(100%);
-    border-radius: .5rem 0px  0px.5rem ;
+    border-radius: 0.5rem 0px 0px.5rem;
   }
 
-  &.active{
+  &.active {
     transform: translateX(0%);
   }
 `
@@ -128,7 +131,7 @@ export const LinkItem = styled.li`
     opacity: 0;
   }
 
-  &.active{
+  &.active {
     opacity: 1;
   }
 

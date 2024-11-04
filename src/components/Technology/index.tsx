@@ -24,14 +24,8 @@ const Technology = ({ techno }: technoProps) => {
       <CardBody>
         <CardTop>
           <p>{techno.title}</p>
-          <p>{techno.percentage}%</p>
         </CardTop>
         <CardType>{techno.type}</CardType>
-        <CardBottom percentage={techno.percentage} mode={buttonDark}>
-          <div className="loading">
-            <div className="total"></div>
-          </div>
-        </CardBottom>
       </CardBody>
     </Container>
   )
